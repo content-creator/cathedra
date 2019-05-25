@@ -19,7 +19,7 @@ notifications:
 ### Build script ###
 ####################
 script:
-  - ./gradlew build sonarqube -Dsonar.host.url=https://sonar.klauke-enterprises.com -Dsonar.projectKey=scorpia -Dsonar.login=$SONAR_TOKEN
+  - ./gradlew build sonarqube -Dsonar.host.url=https://sonar.klauke-enterprises.com -Dsonar.projectKey=cathedra -Dsonar.login=$SONAR_TOKEN
 
 ##################
 ### Deployment ###
