@@ -1,0 +1,29 @@
+################
+### Language ###
+################
+language: java
+
+###########
+### JDK ###
+###########
+jdk:
+  - oraclejdk11
+
+#####################
+### Notifications ###
+#####################
+notifications:
+  email: false
+
+####################
+### Build script ###
+####################
+script:
+  - ./gradlew build sonarqube -Dsonar.host.url=https://sonar.klauke-enterprises.com -Dsonar.projectKey=scorpia -Dsonar.login=$SONAR_TOKEN
+
+###################
+### Environment ###
+###################
+env:
+  global:
+    - secure: ZaoYMmZlqhLJQkzAZeqWRaDQGUOy5yt0uYCC5a7eHbQ6SVzTezCaikrP1n5ISO4PhNeungnwbZOhxA52qu6Hw5lKHXrDfwFjSfiCRANlhFs7R18eHEZA5C5dPkGVhasgOrWrIQ1eBC+DuLaJMmT0+KUaberRACFT9OGgtvAqWvkfXqvbODfGNXaxaUrisFgQWEbDVHK81tSaBc5haB13QO1zcZkRokn2lf9kFL+VgbHkIqCwBs0dhtRsvLXs7DwHMWIOheQOn0vRC8QPhh++Ax5LVHy6eOwmdOUUwvyFpf9xW5wpCWYK/k76reEC86KVOF7q43bkUmtRWKM71qU3swlSu3qrZcPpznKAcRWKzkktW+NUvSaur3jaR5K7Q8UOi2y9Q73DhKJ5zhkbBQzPnnAuYzXXcH/1gDPpKfjQZuaZnd0SEbgxpb3AcwfiZoiSEbJGy35poPvwnYXnP70jyYkzpATJuLRRjauXW/8+GFNNoPkN1y6Nx5ZIeTZAxEB/algiD/OnCHqalOTxqXfzJykZRMTEcvu3rqocJc99rZBkfSI7W4q5KcCI24x2YOHz1Kss5A4/ysceV1Yzq2oL1wMg3v9uJwYJzg78wl89XZYaDfcQtsRCfxWDpHNBVUtO9wLKHJG78tMR5aErKVSeIkepjhrcLOAsTIQH6Pz5XPc=
