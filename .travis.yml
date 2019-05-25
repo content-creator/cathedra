@@ -19,7 +19,7 @@ notifications:
 ### Build script ###
 ####################
 script:
-  - ./gradlew build sonarqube -Dsonar.host.url=https://sonar.klauke-enterprises.com -Dsonar.projectKey=cathedra -Dsonar.login=$SONAR_TOKEN
+  - ./gradlew build sonarqube -Dsonar.host.url=$SONAR_URL -Dsonar.projectKey=$SONAR_PROJECT_KEY-Dsonar.login=$SONAR_TOKEN
 
 ##################
 ### Deployment ###
@@ -35,4 +35,6 @@ deploy:
 ###################
 env:
   global:
+    - SONAR_URL=https://sonar.klauke-enterprises.com
+    - SONAR_PROJECT_KEY=cathedra
     - secure: lr1/zGlnEnG1PUNpjBhTxTQ1hSsLuQH0JcsA/W1a6RNtpTAYJtXHC4dxWKKz+lSrraUY7shhLUFuIcz5aG2EcZOWyq7WR6yDqWWiLpZnlDfIqndCAIgC4S1oMHHMJ7UGDexrwfr7XwbWq3ArzJHFhVsHQc553gVw/njBnfs/8HvUo+Amix4NFg5jyfXcbAoewA9tywaAeAc9mu291Fc0Q4pj+SK+Y8LusRTSJBe1I5gnfHGFQG708BEm05/uBdeka0tphgOX8jh5pHTIxD/o4ZieCB77qRbYum9fRdG6WhamxS+Y20IcdIZ1arRUqBkb/2wpkVNNMvK52YOKG5LS56lW+nKStPyZYADT0y9Uq2DW+Qwdl+6OBnWJCAM9+fxNJJQLLy3rAc1XmNmRdyXOdB9nw4owI60Oa5cVtphsVL0r8bqusHSqSpHraSRT5IerjIIwTlYk3T7F45Tx8ZJz5S3ZxO58oFwFVHCjb/lm5lQeHgtZYuRsEL1WhqgEXAiKDWPntZSKTTA8nvAthnUsE0kTv3AfF+ZSR/MF+0W6QHQEap1QICz6qda7VmcZmt9FFeNAJTBa8Vg90e45OhSsXVdqdtU1Vdr4Ay3Wml97Q2r3v5IpdVYEQj8DaKjGTCh/lwP4kHpvrf84Owt8kD9HYxzuQaO0axSTqAc4lRdrd8U="
