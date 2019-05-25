@@ -1,4 +1,4 @@
-rootProject.name = 'cathedra-parent'
+rootProject.name = 'cathedra'
 include 'server'
 findProject(':server')?.name = 'cathedra-server'
 
