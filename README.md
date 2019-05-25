@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonar.klauke-enterprises.com/api/project_badges/measure?project=cathedra&metric=alert_status)](https://sonar.klauke-enterprises.com/dashboard?id=cathedra)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/content-creator/cathedra)
 # Cathedra
 
 Twitch Moderator and Streamer Management for chat moderation, stream management and a lot of useful features.
